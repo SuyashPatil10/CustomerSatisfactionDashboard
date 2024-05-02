@@ -1,0 +1,489 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 10;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav h1{
+    background: linear-gradient(to left, rgb(230, 79, 79), rgb(174, 74, 91));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} */
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links p{
+    margin: 0 20px;
+}
+
+.links p a{
+    color: white;
+    text-decoration: none;
+}
+
+.links p:last-of-type a{
+    padding: 7px 16px;
+    background: linear-gradient(to left, rgb(230, 79, 79), rgb(174, 74, 91));
+    border-radius: 9999px;
+}
+
+.front-container{
+    width: 100%;
+    height: 650px;
+    position: relative;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.front-container .image{
+    width: 100%;
+    height: 100%;
+}
+
+.front-container .image::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.5); */
+    box-shadow: inset 0 0 20px 400px rgba(0, 0, 0, 0.4);
+}
+
+
+.front-container .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front-container .front-desc{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front-container .front-desc .desc{
+    width: 50%;
+    text-align: center;
+}
+
+.front-container .front-desc .desc h1{
+    font-size: 3rem;
+}
+
+.front-container .front-desc .desc p{
+    font-size: 1.1rem;
+}
+
+
+.apartment-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 30px auto;
+    color: #4d4d65;
+}
+
+.apartment-container .apt-text h1{
+    font-size: 2.2rem;
+}
+
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.slider .slider-over{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    overflow-x: hidden;
+}
+
+.slider .slider-over .slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 10px;
+    overflow-y: hidden;
+}
+
+.slider .slider-over .slide img{
+    width: 280px;
+    height: 270px;
+
+}
+
+.slider .slider-over .slide .desc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.3rem;
+    width: 100%;
+    color: #4d4d65;
+}
+
+.desc .apt-name{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.desc .feature{
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.service-container{
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4d4d65;
+}
+
+.service-container .service-header{
+    font-size: 1rem;
+}
+
+.service-container .service-desc{
+    margin-left: 80px;
+}
+
+.service-container .service-desc p{
+    font-size: 0.8rem;
+}
+
+.service-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.service-icons .icons{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    border-radius: 4px;
+}
+
+.service-icons .icons:first-of-type{
+    border-top-left-radius: 30px;
+}
+
+.service-icons .icons:last-of-type{
+    border-bottom-right-radius: 30px;
+}
+
+.service-icons .icons .icon-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px;
+}
+ 
+.icon-image img{
+    width: 80px;
+    height: 80px;
+}
+
+
+/* grid area */
+
+.grid-show{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto;
+
+}
+
+.grid-area{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-areas: 
+        "discount first first sixth"
+        "discount second fourth fifth";
+    gap: 4px;
+    margin: 0 auto;
+}
+
+#discount{
+ grid-area: discount;
+ background-color: #4d4d65;   
+}
+
+#first{
+    grid-area: first;
+}
+
+#second{
+    grid-area: second;
+}
+
+#third{
+    grid-area: third;
+}
+
+#fourth{
+    grid-area: fourth;
+}
+
+#fifth{
+    grid-area: fifth;
+}
+
+#sixth{
+    grid-area: sixth;
+}
+
+.grid-image img{
+    width: 100%;
+    height: 100%;    
+}
+
+.hotel-offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hotel-offer .discount-percent{
+    text-align: center;
+    margin: 0 0 70px 0;
+}
+
+.discount-percent .percent{
+    font-size: 2.4rem;
+}
+
+.room-discount{
+    text-align: center;
+}
+
+.room-discount h2{
+    font-size: 2rem;
+}
+
+.upto{
+    font-size: 1.3rem;
+    font-weight: 600px;
+}
+
+.room-discount button{
+    padding: 10px 20px;
+    color: white;
+    background-color: #d1b517;
+    background: linear-gradient(to left, #b79f1b, #e7c505);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+
+.beach-apt{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.beach-apt .beach-apt-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    margin: 0 0 30px 0;
+}
+
+.beach-apt .beach-apt-grid .beach-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.beach-apt .beach-apt-grid .beach-desc{
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 40px 40px 30px 40px;
+    color: #4d4d65;
+    text-align: center;
+    background-color: #EFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.beach-apt .beach-apt-grid .beach-desc p{
+    padding: 20px 0 0 0;
+}
+
+.beach-apt .beach-apt-grid .beach-desc button{
+    padding: 10px 20px;
+    background-color: #4d4d65;
+    color: white;
+    border: none;
+    outline: none;
+    margin: 20px 0 0 0;
+    border-radius: 4px;
+}
+
+footer{
+    width: 100%;
+    background-color: #4d4d65;
+}
+
+.foot{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+    color: white;
+}
+
+.foot .web-info{
+    flex: 1 0 33%;
+    margin: 0 20px;
+}
+
+.foot .web-info p{
+    font-size: 0.9rem;
+}
+
+.foot .foot-links{
+    flex: 1 0 33%;
+    text-align: center;
+    margin: 5px 20px;
+}
+
+.foot .foot-links ul{
+    list-style-type: none;
+}
+
+.foot .foot-links ul li{
+    margin: 10px 0;
+}
+
+.foot .foot-links ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.foot .foot-links ul li a:hover{
+    text-decoration: underline white;
+}
+
+.foot .subscribe{
+    flex: 1 0 33%;
+    margin: 5px 20px;
+}
+
+.foot .subscribe .input{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;   
+}
+
+.foot .subscribe .input input{
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+    background: transparent;
+    font-size: 0.8rem;
+    caret-color: white;
+    width: 200px;
+}
+
+.foot .subscribe .input input::placeholder{
+    color: white;
+}
+
+.foot .subscribe .input i{
+    display: block;
+    padding: 10px 15px;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    background: linear-gradient(to left, rgb(230, 79, 79), rgb(174, 74, 91));
+    border-radius: 4px;
+}
+
+.foot .subscribe p{
+    margin: 10px 0;
+}
+
+.foot .subscribe .social-links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.foot .subscribe .social-links a{
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.foot .subscribe .social-links a i{
+    margin: 0 20px 0 0;
+    display: block;
+    padding: 13px 15px;
+    border-radius: 50%;
+    background: linear-gradient(to left, rgb(230, 79, 79), rgb(174, 74, 91));
+    color: white;
+    cursor: pointer;
+}
